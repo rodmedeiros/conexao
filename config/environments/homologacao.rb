@@ -24,7 +24,7 @@ Rails.application.configure do
   # config.log_level = :debug
 
   # Use a different logger for distributed setups
-  config.logger = SyslogLogger.new 'gnup_p'
+  config.logger = SyslogLogger.new 'gnup_h'
 
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
@@ -37,7 +37,7 @@ Rails.application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.delivery_method = :smtp
 
@@ -50,19 +50,4 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-
-  config.eager_load = false
-  config.active_record.migration_error = :page_load
-
-  config.action_mailer.default_url_options = { :host => 'https://sistemas.uff.br' }
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-      :address =>              'smtp.gmail.com',
-      :port =>                 '587',
-      :domain =>               'gmail.com',
-      :user_name =>            'sisapuff@gmail.com',
-      :password =>             'sisap2012',
-      :authentication =>       'plain',
-      :enable_starttls_auto => true  }
 end
