@@ -1,28 +1,48 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto Padrão Rails
 
-Things you may want to cover:
+Coisas que já vem no pacote:
 
-* Ruby version
+* Projeto Rails (v 4.2.5)
 
-* System dependencies
+* Testes pré-configurados (rspec, vcr para testes de webservices, shoulda-matchers, capybara, database_cleaner)
 
-* Configuration
+* portal-sso (v 3.0.1)
 
-* Database creation
+* newrelic_rpm pré-configurado (v 3.12.0.288)
 
-* Database initialization
+* syslog-logger pré-configurado (v 1.4.1)
 
-* How to run the test suite
+* Ambientes de homologação e produção pré-configurados com envio de email em caso de erro
 
-* Services (job queues, cache servers, search engines, etc.)
+* HealthCheckController com 'teste_monitoramento' e 'teste_email'
+** Acesse /teste-monitoramento para verificar se o sistema está no ar e com acesso ao banco
+** Acesse /teste-email para verificar se o sistema está enviando email em casos de erro (produção/homolog)
 
-* Deployment instructions
+* Diversas gems para agilizar o desenvolvimento (verificar gemfile, ler o readme delas no github)
 
-* ...
+Coisas que você precisa fazer ao utilizar esse projeto padrão:
 
+* Configurar o database (Escolher o banco - mysql, pg, oracle, etc...)
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Configurar o nome do projeto: em (config/application.rb, trocar MyAppName pelo nome desejado. exemplo: module SisWow)
+
+* Configurar o logged
+
+** Em homologacao.rb: Trocar em config.logger = SyslogLogger.new 'app_name_h' para '<nome_do_app>_h'
+
+** Em production.rb: Trocar em config.logger = SyslogLogger.new 'app_name_p' para '<nome_do_app>_p'
+
+* Configurar o newrelic
+
+** Em newrelic.yml, substituir os app_name. setar o nome normal e o nome em Staging(homologação)
+
+O que está por vir:
+
+* Configuração para utilizar portal-sso no login (autenticação)
+
+Ultima revisão: 10/12/2015
+
+POR FAVOR: Alterar esse readme SEMPRE que modificar esse projeto.
+De nada valerá esse projeto se ele não estiver bem documentado.
