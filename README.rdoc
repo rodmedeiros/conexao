@@ -8,7 +8,7 @@ Coisas que já vem no pacote:
 
 * Testes pré-configurados (rspec, vcr para testes de webservices, shoulda-matchers, capybara, database_cleaner)
 
-* portal-sso (v 3.0.1)
+* portal-sso (v 3.0.1) - já com login (autenticação via portal, levando a uma página home vazia)
 
 * newrelic_rpm pré-configurado (v 3.12.0.288)
 
@@ -17,8 +17,8 @@ Coisas que já vem no pacote:
 * Ambientes de homologação e produção pré-configurados com envio de email em caso de erro
 
 * HealthCheckController com 'teste_monitoramento' e 'teste_email'
-** Acesse /teste-monitoramento para verificar se o sistema está no ar e com acesso ao banco
-** Acesse /teste-email para verificar se o sistema está enviando email em casos de erro (produção/homolog)
+Acesse /teste-monitoramento para verificar se o sistema está no ar e com acesso ao banco
+Acesse /teste-email para verificar se o sistema está enviando email em casos de erro (produção/homolog)
 
 * Diversas gems para agilizar o desenvolvimento (verificar gemfile, ler o readme delas no github)
 
@@ -40,7 +40,7 @@ Coisas que você precisa fazer ao utilizar esse projeto padrão:
 
 O que está por vir:
 
-* Configuração para utilizar portal-sso no login (autenticação)
+* Layout padrão novo?
 
 Ultima revisão: 10/12/2015
 
