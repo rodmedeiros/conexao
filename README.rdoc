@@ -4,7 +4,9 @@ Projeto Padrão Rails
 
 Coisas que já vem no pacote:
 
-* Projeto Rails (v 4.2.5)
+* Projeto Rails (v 4.2.5.1)
+
+* Rake (v 10.5.0)
 
 * Testes pré-configurados (rspec, vcr para testes de webservices, shoulda-matchers, capybara, database_cleaner)
 
@@ -13,6 +15,10 @@ Coisas que já vem no pacote:
 * newrelic_rpm pré-configurado (v 3.12.0.288)
 
 * syslog-logger pré-configurado (v 1.4.1)
+
+* letter_opener configurado para abrir emails em desenvolvimento (veja development.rb)
+
+* Databases pre-configurados
 
 * Ambientes de homologação e produção pré-configurados com envio de email em caso de erro
 
@@ -25,6 +31,11 @@ Acesse /teste-email para verificar se o sistema está enviando email em casos de
 Coisas que você precisa fazer ao utilizar esse projeto padrão:
 
 * Configurar o database (Escolher o banco - mysql, pg, oracle, etc...)
+
+** Escolher no gemfile se decide usar mysql2, sqlite, etc.
+** Escolher um dos database.yml.<banco>.example, renomear para database.yml e apagar os outros.
+** Caso utilize outro banco (pg, oracle), por favor,
+** coloque a gem comentada no gemfile e deixe um .example com a configuração e suba a atualização
 
 * Configurar o nome do projeto: em (config/application.rb, trocar MyAppName pelo nome desejado. exemplo: module SisWow)
 
@@ -42,7 +53,7 @@ O que está por vir:
 
 * Layout padrão novo?
 
-Ultima revisão: 10/12/2015
+Ultima revisão: 03/02/2016
 
 POR FAVOR: Alterar esse readme SEMPRE que modificar esse projeto.
 De nada valerá esse projeto se ele não estiver bem documentado.
