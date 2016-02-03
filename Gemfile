@@ -4,10 +4,12 @@ source 'https://XXXXXXXX:XXXXXXXX@sistemas.uff.br/sti/gemserver/' do
   gem 'portal-sso', '3.0.1'
 end
 
+# Chose which database you wish to use
+# gem 'sqlite3'
+# gem 'mysql2'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
-# Use sqlite3 as the database for Active Record
+gem 'rails', '4.2.5.1'
+gem 'rake', '10.5.0'
 gem 'puma', '2.11.3'
 gem 'secure_headers', '2.2.2'
 gem 'jquery-rails'
@@ -17,7 +19,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'normalize-rails'
-gem 'sqlite3'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -47,7 +49,7 @@ group :development do
   gem 'better_errors', '2.1.1'
   gem 'binding_of_caller', '0.7.2'
   # Para envios de email (testes em dev)
-  # gem 'letter_opener',        '1.4.1'
+  gem 'letter_opener',        '1.4.1'
   gem 'bullet', '4.14.7'
   gem 'quiet_assets', '1.1.0'
 end
@@ -76,5 +78,3 @@ group :development, :test do
   gem 'web-console', '2.2.1'
   gem 'spring', '1.3.6'
 end
-
-
