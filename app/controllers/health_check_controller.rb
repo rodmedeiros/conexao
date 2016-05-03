@@ -9,7 +9,6 @@ class HealthCheckController < ActionController::Base
     render text: text
   end
 
-  # TODO: Create an exception for this test
   def teste_email
     raise 'Email test error'
   end

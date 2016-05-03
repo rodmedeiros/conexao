@@ -1,14 +1,10 @@
 source 'https://rubygems.org'
 
-source 'https://XXXXXXXX:XXXXXXXX@sistemas.uff.br/sti/gemserver/' do
-  gem 'portal-sso', '3.0.1'
-end
+ruby '2.1.5'
 
-# Chose which database you wish to use
-# gem 'sqlite3'
-# gem 'mysql2'
+gem 'portal-sso', '3.0.1', source: 'https://XXXXXXXX:XXXXXXXX@sistemas.uff.br/sti/gemserver/'
 
-gem 'rails', '4.2.5.1'
+gem 'rails', '4.2.6'
 gem 'rake', '10.5.0'
 gem 'puma', '2.11.3'
 gem 'secure_headers', '2.2.2'
@@ -19,6 +15,13 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'normalize-rails'
+
+# Chose which database you wish to use
+# gem 'sqlite3'
+gem 'mysql2'
+
+gem 'jquery-turbolinks'
+gem 'exception_notification', '4.1.3'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -58,7 +61,7 @@ group :test do
   gem 'shoulda-matchers', '2.8.0', require: false
   gem 'simplecov', '0.10.0', require: false
   # Para testes de email
-  # gem 'email_spec',           '1.6.0'
+  gem 'email_spec', '1.6.0'
   gem 'capybara', '2.4.4'
   # Para testes js
   # gem 'poltergeist',          '1.6.0'

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get 'teste-monitoramento' => 'health_check#teste_monitoramento'
-  get 'teste-email' => 'health_check#teste-email'
+  get 'teste-email' => 'health_check#teste_email'
 
   # You can have the root of your site routed with "root"
   root 'home#index'
