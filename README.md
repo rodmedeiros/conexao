@@ -4,6 +4,10 @@
 
 Projeto padrão com todos os pacotes/bibliotecas/configurações utilizados nos projetos Rails da STI-UFF
 
+### Contribuíndo
+
+Para alterar o projeto padrão, por favor, atualize o changelog seguindo o padrão lá estabelecido
+
 ### Coisas que já vem no pacote:
 
 * Projeto Rails (v 4.2.6)
