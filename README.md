@@ -10,9 +10,7 @@ Para alterar o projeto padrão, por favor, atualize o changelog seguindo o padr�
 
 ### Coisas que já vem no pacote:
 
-* Projeto Rails (v 4.2.6)
-
-* Rake (v 10.5.0)
+* Projeto Rails (v 5.1.1)
 
 * Testes pré-configurados ([rspec](https://github.com/rspec/rspec-rails),
 [vcr](https://github.com/vcr/vcr/),
@@ -20,9 +18,9 @@ Para alterar o projeto padrão, por favor, atualize o changelog seguindo o padr�
 [capybara](https://github.com/jnicklas/capybara),
 [database_cleaner](https://github.com/DatabaseCleaner/database_cleaner))
 
-* portal-sso (v 3.0.1) - já com login (autenticação via portal, levando a uma página home vazia)
+* iduff-sso (v 0.0.6) - já com login (autenticação via portal, levando a uma página home vazia)
 
-* newrelic_rpm pré-configurado (v 3.12.0.288)
+* newrelic_rpm pré-configurado (v 3.18.1.330)
 
 * syslog-logger pré-configurado (v 1.4.1)
 
@@ -63,7 +61,7 @@ O que está por vir:
 
 * Layout padrão novo?
 
-Ultima revisão: 03/05/2016
+Ultima revisão: 01/06/2017
 
 POR FAVOR: Alterar esse readme SEMPRE que modificar esse projeto.
 De nada valerá esse projeto se ele não estiver bem documentado.
