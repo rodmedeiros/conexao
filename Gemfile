@@ -2,16 +2,13 @@ source 'https://rubygems.org'
 
 ruby '2.4.1'
 
-gem 'iduff-sso', '0.0.6', source: 'https://XXXXXXXX:XXXXXXXX@sistemas.uff.br/sti/gemserver/'
+gem 'iduff-sso', '0.1.0', source: 'https://XXXXXXXX:XXXXXXXX@sistemas.uff.br/sti/gemserver/'
 
-gem 'rails', '5.1.1'
-gem 'puma', '2.15.3'
-gem 'secure_headers', '2.4.4'
-gem 'jquery-rails'
+gem 'rails', '5.1.3'
+gem 'puma', '3.10.0'
+gem 'secure_headers', '4.0.1'
 gem 'turbolinks'
-gem 'jbuilder'
 gem 'sass-rails'
-gem 'coffee-rails'
 gem 'uglifier'
 gem 'normalize-rails'
 
@@ -19,7 +16,6 @@ gem 'normalize-rails'
 # gem 'sqlite3'
 gem 'mysql2'
 
-gem 'jquery-turbolinks'
 gem 'exception_notification'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -55,16 +51,16 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers', '3.0.1', require: false
-  gem 'simplecov', '0.11.1', require: false
+  gem 'shoulda-matchers', '~> 3.1.2', require: false
+  gem 'simplecov', '~> 0.15.1', require: false
   # Para testes de email
-  gem 'email_spec', '1.6.0'
-  gem 'capybara', '2.5.0'
+  gem 'email_spec', '~> 2.1.1'
+  gem 'capybara', '~> 2.15.4'
   # Para testes js
   # gem 'poltergeist',          '1.8.0'
-  gem 'vcr', '3.0.0'
-  gem 'webmock', '1.22.3'
-  gem 'database_cleaner', '1.5.1'
+  gem 'vcr', '~> 3.0.3'
+  gem 'webmock', '~> 3.1.0'
+  gem 'database_cleaner', '~> 1.6.1'
 end
 
 group :development, :test do
@@ -72,9 +68,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'dotenv-rails'
-  gem 'awesome_print', '1.6.1'
-  gem 'spring-commands-rspec', '1.0.4'
-  gem 'byebug', '8.2.1'
+  gem 'awesome_print'
+  gem 'spring-commands-rspec'
+  gem 'byebug'
   gem 'web-console'
-  gem 'spring', '1.5.0'
+  gem 'spring'
 end

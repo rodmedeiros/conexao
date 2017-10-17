@@ -10,7 +10,7 @@ Para alterar o projeto padrão, por favor, atualize o changelog seguindo o padr�
 
 ### Coisas que já vem no pacote:
 
-* Projeto Rails (v 5.1.1)
+* Projeto Rails (v 5.1.3)
 
 * Testes pré-configurados ([rspec](https://github.com/rspec/rspec-rails),
 [vcr](https://github.com/vcr/vcr/),
@@ -18,7 +18,9 @@ Para alterar o projeto padrão, por favor, atualize o changelog seguindo o padr�
 [capybara](https://github.com/jnicklas/capybara),
 [database_cleaner](https://github.com/DatabaseCleaner/database_cleaner))
 
-* iduff-sso (v 0.0.6) - já com login (autenticação via portal, levando a uma página home vazia)
+* secure_headers pré-configurado (v 4.0.1)
+
+* iduff-sso (v 0.1.0) - já com login (autenticação via portal, levando a uma página home vazia)
 
 * newrelic_rpm pré-configurado (v 3.18.1.330)
 
@@ -30,13 +32,16 @@ Para alterar o projeto padrão, por favor, atualize o changelog seguindo o padr�
 
 * Ambientes de homologação e produção pré-configurados com envio de email em caso de erro
 
+
 * HealthCheckController com 'teste_monitoramento' e 'teste_email'
 Acesse /teste-monitoramento para verificar se o sistema está no ar e com acesso ao banco
 Acesse /teste-email para verificar se o sistema está enviando email em casos de erro (produção/homolog)
 
 * Diversas gems para agilizar o desenvolvimento (verificar gemfile, ler o readme delas no github)
 
-Coisas que você precisa fazer ao utilizar esse projeto padrão:
+## Utilizando o projeto padrão:
+
+* Clonar esse repositório
 
 * Configurar o database (Escolher o banco - mysql, sqlite, pg, oracle, etc...)
 
