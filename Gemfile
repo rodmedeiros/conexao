@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.4.1'
+ruby '2.5.1'
 
 gem 'iduff-sso', '0.1.0', source: 'https://XXXXXXXX:XXXXXXXX@sistemas.uff.br/sti/gemserver/'
 
-gem 'rails', '5.1.3'
+gem 'rails', '5.2.0'
 gem 'puma', '3.10.0'
 gem 'secure_headers', '4.0.1'
 gem 'turbolinks'
@@ -13,8 +13,8 @@ gem 'uglifier'
 gem 'normalize-rails'
 
 # Chose which database you wish to use
-# gem 'sqlite3'
-gem 'mysql2'
+gem 'sqlite3', '~> 1.3', '>= 1.3.13'
+#gem 'mysql2'
 
 gem 'exception_notification'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -65,7 +65,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.4.1'
   gem 'pry-rails'
   gem 'dotenv-rails'
   gem 'awesome_print'
