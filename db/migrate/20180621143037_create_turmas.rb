@@ -1,15 +1,14 @@
 class CreateTurmas < ActiveRecord::Migration[5.2]
   def change
     create_table :turmas do |t|
-      t.string :codigo
+      t.string :codigo_turma
+      t.string :codigo_displina
       t.string :disciplina
+      t.integer :ano
       t.integer :semestre
       t.timestamps
     end
-    add_index :turmas, :codigo
-    add_index :turmas, :disciplina
-    add_index :turmas, :semestre
-    add_index :turmas, [:codigo,:disciplina,:semestre], unique:true
+      add_index :turmas, [:codigo_turma, :codigo_displina,:disciplina, :ano, :semestre], unique:true
   end
 end
 

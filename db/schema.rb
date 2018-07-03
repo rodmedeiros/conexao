@@ -10,37 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_21_143139) do
-
-  create_table "horarios", force: :cascade do |t|
-    t.string "dia_semana"
-    t.string "hora_inicio"
-    t.string "hora_fim"
-  end
-
-  create_table "postagems", force: :cascade do |t|
-    t.string "descricao"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "topicos", force: :cascade do |t|
-    t.string "titulo"
-    t.string "descricao"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "turmas", force: :cascade do |t|
-    t.string "codigo"
-    t.string "disciplina"
-    t.integer "semestre"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["codigo", "disciplina", "semestre"], name: "index_turmas_on_codigo_and_disciplina_and_semestre", unique: true
-    t.index ["codigo"], name: "index_turmas_on_codigo"
-    t.index ["disciplina"], name: "index_turmas_on_disciplina"
-    t.index ["semestre"], name: "index_turmas_on_semestre"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end

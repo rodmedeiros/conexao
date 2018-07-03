@@ -48,6 +48,7 @@ group :development do
   gem 'letter_opener'
   gem 'bullet'
   gem 'listen'
+  gem 'web-console'
 end
 
 group :test do
@@ -71,6 +72,6 @@ group :development, :test do
   gem 'awesome_print'
   gem 'spring-commands-rspec'
   gem 'byebug'
-  gem 'web-console'
+  #gem 'web-console'
   gem 'spring'
 end
