@@ -21,10 +21,6 @@ ActiveRecord::Schema.define(version: 2018_07_04_202743) do
     t.string "dia_semana"
     t.string "hora_inicio"
     t.string "hora_fim"
-    t.integer "turma_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["turma_id"], name: "index_horarios_on_turma_id"
   end
 
   create_table "mensagems", force: :cascade do |t|
@@ -64,39 +60,48 @@ ActiveRecord::Schema.define(version: 2018_07_04_202743) do
     t.index ["users_id"], name: "index_participacaos_on_users_id"
   end
 
-
+  create_table "participations", force: :cascade do |t|
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "class_id"
+    t.index ["class_id"], name: "index_participations_on_class_id"
+    t.index ["user_id"], name: "index_participations_on_user_id"
+  end
 
   create_table "postagems", force: :cascade do |t|
     t.string "descricao"
-    t.integer "usuario_id"
-    t.integer "topico_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["topico_id"], name: "index_postagems_on_topico_id"
-    t.index ["usuario_id"], name: "index_postagems_on_usuario_id"
-
   end
 
   create_table "topicos", force: :cascade do |t|
     t.string "titulo"
     t.string "descricao"
-    t.integer "usuario_id"
-    t.integer "turma_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["turma_id"], name: "index_topicos_on_turma_id"
-    t.index ["usuario_id"], name: "index_topicos_on_usuario_id"
   end
 
   create_table "turmas", force: :cascade do |t|
-    t.string "codigo_turma"
-    t.string "codigo_displina"
+    t.string "codigo"
     t.string "disciplina"
-    t.integer "ano"
     t.integer "semestre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["codigo_turma", "codigo_displina", "disciplina", "ano", "semestre"], name: "index_unique_turmas", unique: true
+    t.string "codigo_disciplina"
+    t.index ["codigo", "disciplina", "semestre"], name: "index_turmas_on_codigo_and_disciplina_and_semestre", unique: true
+    t.index ["codigo"], name: "index_turmas_on_codigo"
+    t.index ["disciplina"], name: "index_turmas_on_disciplina"
+    t.index ["semestre"], name: "index_turmas_on_semestre"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "iduff", limit: 9
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "usuarios", force: :cascade do |t|
