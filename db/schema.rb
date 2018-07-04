@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_04_190331) do
+ActiveRecord::Schema.define(version: 2018_07_04_202743) do
 
   create_table "conversas", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 2018_07_04_190331) do
     t.integer "semestre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "codigo_disciplina"
     t.index ["codigo", "disciplina", "semestre"], name: "index_turmas_on_codigo_and_disciplina_and_semestre", unique: true
     t.index ["codigo"], name: "index_turmas_on_codigo"
     t.index ["disciplina"], name: "index_turmas_on_disciplina"
