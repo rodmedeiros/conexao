@@ -8,7 +8,7 @@ class CreateTurmas < ActiveRecord::Migration[5.2]
       t.integer :semestre
       t.timestamps
     end
-      add_index :turmas, [:codigo_turma, :codigo_displina,:disciplina, :ano, :semestre], unique:true
+      add_index :turmas, [:codigo_turma, :codigo_displina,:disciplina, :ano, :semestre], unique:true,:name => "index_unique_turmas"
   end
 end
 

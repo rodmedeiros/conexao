@@ -4,6 +4,6 @@ FactoryGirl.define do
   factory :participacao do
     usuario {create :usuario}
     turma {create :turma}
-    tipo "aluno"
+    tipo 'aluno'
   end
 end
