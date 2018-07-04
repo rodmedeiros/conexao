@@ -21,13 +21,10 @@ ActiveRecord::Schema.define(version: 2018_07_04_190331) do
     t.string "dia_semana"
     t.string "hora_inicio"
     t.string "hora_fim"
-<<<<<<< HEAD
     t.integer "turma_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["turma_id"], name: "index_horarios_on_turma_id"
-=======
->>>>>>> 5c441078ac024e7fda3a63eedfab94f13a043e9d
   end
 
   create_table "mensagems", force: :cascade do |t|
@@ -40,8 +37,6 @@ ActiveRecord::Schema.define(version: 2018_07_04_190331) do
     t.index ["usuario_id"], name: "index_mensagems_on_usuario_id"
   end
 
-<<<<<<< HEAD
-=======
   create_table "messages", force: :cascade do |t|
     t.text "story"
     t.integer "user_id"
@@ -50,7 +45,6 @@ ActiveRecord::Schema.define(version: 2018_07_04_190331) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
->>>>>>> 5c441078ac024e7fda3a63eedfab94f13a043e9d
   create_table "participacao_conversas", force: :cascade do |t|
     t.integer "usuario_id"
     t.integer "conversa_id"
@@ -69,6 +63,7 @@ ActiveRecord::Schema.define(version: 2018_07_04_190331) do
     t.index ["turma_id"], name: "index_participacaos_on_turma_id"
     t.index ["users_id"], name: "index_participacaos_on_users_id"
   end
+
 
 
   create_table "postagems", force: :cascade do |t|
@@ -102,7 +97,6 @@ ActiveRecord::Schema.define(version: 2018_07_04_190331) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["codigo_turma", "codigo_displina", "disciplina", "ano", "semestre"], name: "index_unique_turmas", unique: true
-
   end
 
   create_table "usuarios", force: :cascade do |t|
