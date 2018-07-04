@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :horario do
     turma {create :turma}
-    dia_da_semana "segunda-feira"
+    dia_semana "segunda-feira"
     hora_inicio "18:00"
     hora_fim "20:00"
   end

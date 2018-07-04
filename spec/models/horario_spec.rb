@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Horario, type: :model do
-  let(:horario) {Horario.new}
+  let(:horario) { build(:horario) }
 
   describe 'validations' do
     subject { horario }
