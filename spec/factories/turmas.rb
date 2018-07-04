@@ -2,5 +2,10 @@
 
 FactoryGirl.define do
   factory :turma do
+    codigo_turma "001"
+    codigo_discliplina "002"
+    disciplina "BPM"
+    ano 2018
+    semestre 1
   end
 end
