@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :mensagem do
+    usuario {create :usuario}
 
   end
 end
