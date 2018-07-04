@@ -72,6 +72,6 @@ group :development, :test do
   gem 'awesome_print'
   gem 'spring-commands-rspec'
   gem 'byebug'
-  #gem 'web-console'
   gem 'spring'
+  gem 'guard-rspec'
 end
