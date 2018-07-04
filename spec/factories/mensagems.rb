@@ -3,6 +3,7 @@
 FactoryGirl.define do
   factory :mensagem do
     usuario {create :usuario}
-
+    conversa {create :conversa}
+    descricao "teste"
   end
 end
