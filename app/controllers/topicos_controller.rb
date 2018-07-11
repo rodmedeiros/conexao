@@ -1,4 +1,4 @@
-class Topicos < ApplicationController
+class TopicosController < ApplicationController
 
   def create
     @topico = current_usuario.topicos.build(topico_params)
