@@ -49,6 +49,7 @@ GEM
     aggregate (0.2.2)
     arel (9.0.0)
     awesome_print (1.8.0)
+    bcrypt (3.1.12)
     better_errors (2.4.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -95,6 +96,8 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    faker (1.8.7)
+      i18n (>= 0.7)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
@@ -306,6 +309,7 @@ PLATFORMS
 DEPENDENCIES
   SyslogLogger (= 1.4.1)
   awesome_print
+  bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
   bullet
@@ -316,6 +320,7 @@ DEPENDENCIES
   email_spec (~> 2.1.1)
   exception_notification
   factory_girl_rails (~> 4.4.1)
+  faker
   guard-rspec
   iduff-sso (= 0.1.0)!
   letter_opener

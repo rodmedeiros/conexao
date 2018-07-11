@@ -2,8 +2,14 @@
 
 FactoryGirl.define do
   factory :usuario do
-    iduff "123"
+    iduff "875849283"
     tipo "aluno"
-    nome "Marcelino"
+    cpf '17722511600'
+    password { Faker::Internet.password }
+    nome { Faker::Name.name }
+
+    factory :admin do
+      admin true
+    end
   end
 end
