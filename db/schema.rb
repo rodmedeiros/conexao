@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_04_202743) do
+ActiveRecord::Schema.define(version: 2018_07_11_133611) do
 
   create_table "conversas", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -94,6 +94,9 @@ ActiveRecord::Schema.define(version: 2018_07_04_202743) do
     t.string "tipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin"
+    t.string "cpf"
+    t.string "password_digest"
     t.index ["iduff"], name: "index_usuarios_on_iduff", unique: true
   end
 
