@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_11_133611) do
+ActiveRecord::Schema.define(version: 2018_07_11_160743) do
 
   create_table "conversas", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -27,14 +27,14 @@ ActiveRecord::Schema.define(version: 2018_07_11_133611) do
     t.index ["turma_id"], name: "index_horarios_on_turma_id"
   end
 
-  create_table "mensagems", force: :cascade do |t|
+  create_table "mensagens", force: :cascade do |t|
     t.integer "usuario_id"
     t.integer "conversa_id"
     t.string "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["conversa_id"], name: "index_mensagems_on_conversa_id"
-    t.index ["usuario_id"], name: "index_mensagems_on_usuario_id"
+    t.index ["conversa_id"], name: "index_mensagens_on_conversa_id"
+    t.index ["usuario_id"], name: "index_mensagens_on_usuario_id"
   end
 
   create_table "participacao_conversas", force: :cascade do |t|
@@ -46,24 +46,24 @@ ActiveRecord::Schema.define(version: 2018_07_11_133611) do
     t.index ["usuario_id"], name: "index_participacao_conversas_on_usuario_id"
   end
 
-  create_table "participacaos", force: :cascade do |t|
+  create_table "participacoes", force: :cascade do |t|
     t.integer "users_id"
     t.integer "turma_id"
     t.string "tipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["turma_id"], name: "index_participacaos_on_turma_id"
-    t.index ["users_id"], name: "index_participacaos_on_users_id"
+    t.index ["turma_id"], name: "index_participacoes_on_turma_id"
+    t.index ["users_id"], name: "index_participacoes_on_users_id"
   end
 
-  create_table "postagems", force: :cascade do |t|
+  create_table "postagens", force: :cascade do |t|
     t.string "descricao"
     t.integer "usuario_id"
     t.integer "topico_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["topico_id"], name: "index_postagems_on_topico_id"
-    t.index ["usuario_id"], name: "index_postagems_on_usuario_id"
+    t.index ["topico_id"], name: "index_postagens_on_topico_id"
+    t.index ["usuario_id"], name: "index_postagens_on_usuario_id"
   end
 
   create_table "topicos", force: :cascade do |t|
