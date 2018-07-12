@@ -1,22 +1,29 @@
 class PostagensControllee < ApplicationController
 
+  def new
+    @postagem = Postagem.new
+  end
+
   def create
-    @postagem = current_usuario.postagens.build(postagem_params)
+    @postagem.usuario_id = Usuario.find(params[:id])
+    @postagem.topico_id = Topico.find(params[:id])
+    @postagem = Postagem.new(topico_params)
+    if @postagem.save
+      redirect_back(fallback_location: root_path)
+    else
+      render 'usuarios/index'
+    end
   end
 
   def destroy
+    @postagem = Postagem.find(params[:id])
     @postagem.destroy
   end
 
   private
 
-  def current_usuario
-    @postagem = current_usuario.postagem.find_by(id: params[:id])
-    redirect_to index_path if @postagem.nil?
-  end
-
   def topico_params
-    @postagem = topico.postagens.find_by(id: params(:id))
+    params.require(:postagem).permit(:descricao)
   end
 
 end

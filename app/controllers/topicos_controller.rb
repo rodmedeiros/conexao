@@ -1,22 +1,28 @@
 class TopicosController < ApplicationController
 
+  def new
+    @topico = Topico.new
+  end
+
   def create
-    @topico = current_usuario.topicos.build(topico_params)
+    @topico.usuario = current_user
+    @topico = Topico.new(topico_params)
+    if @topico.save
+      redirect_back(fallback_location: root_path)
+    else
+      render 'usuarios/index'
+    end
   end
 
   def destroy
+    @topico = Topico.find(params[:id])
     @topico.destroy
   end
 
   private
 
-  def current_usuario
-    @topico = current_usuario.topicos.find_by(id: params[:id])
-    redirect_to index_path if @topico.nil?
-  end
-
   def topico_params
-    @topico = current_usuario.topicos.find_by(id: params(:id))
+    params.require(:topico).permit(:titulo, :descricao)
   end
 
 end

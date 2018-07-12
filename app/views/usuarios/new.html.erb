@@ -1,0 +1,19 @@
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@usuario) do |f| %>
+      <%= render 'usuarios/new', object: f.object %>
+      <%= f.label :iduff %>
+      <%= f.text_field :iduff, class: 'form-control' %>
+
+      <%= f.label :nome %>
+      <%= f.text_field :nome, class: 'form-control' %>
+
+      <%= f.label :tipo %>
+      <%= f.text_field :tipo, class: 'form-control' %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,11 +1,21 @@
 class UsuariosController < ApplicationController
 
+  def new
+    @usuario = Usuario.new
+  end
+
   def index
     @usuarios = Usuario.all
   end
 
   def create
-    @usuario = Usuario.new(user_params)
+    @usuario = Usuario.new(usuario_params)
+    if @user.save
+      flash[:success] = "Usuario criado com sucesso"
+      redirect_back(fallback_location: root_path)
+    else
+      render 'usuarios/index'
+    end
   end
 
   def destroy
@@ -18,7 +28,7 @@ class UsuariosController < ApplicationController
   def update
     @usuario = Usuario.find(params[:id])
     @usuario.update(user_params)
-    redirect_to index_path
+    redirect_back(fallback_location: index)
   end
 
   def show
@@ -27,8 +37,8 @@ class UsuariosController < ApplicationController
 
   private
 
-  def user_params
-    params.require(:user).permit(:nome, :iduff, :tipo)
+  def usuario_params
+    params.require(:usuario).permit(:nome, :iduff, :tipo, :cpf, :admin)
   end
 
 
