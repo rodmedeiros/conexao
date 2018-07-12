@@ -33,8 +33,12 @@
 
     <ul class="navbar-nav mr-right">
       <li class="nav-item">
-        <%= link_to 'Entrar', login_path, class: 'nav-link btn btn-outline-info btn-md' %>
-      </li>
-    </ul>
+    <% if logado? %>
+      <%= link_to 'Sair', logout_path, class: 'nav-link btn btn-outline-info btn-md' %>
+    <% else %>
+      <%= link_to 'Entrar', login_path, class: 'nav-link btn btn-outline-info btn-md' %>
+    <% end %>
+  </li>
+</ul>
   </nav>
 </header>

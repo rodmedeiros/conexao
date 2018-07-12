@@ -9,5 +9,19 @@ class ApplicationController < ActionController::Base
   # usuario_corrente (com usuario_corrente.iduff e usuario_corrente.ip)
   # usuario_logado? (true ou false, status do login no portal)
 
+  helper_method :admin_corrente, :logado?, :logout
+
+  def admin
+    @admin ||= Usuario.find_by_id(session[:user_id])
+  end
+
+  def logado?
+    admin != nil
+  end
+
+  def logout
+    @admin = nil
+    session[:user_id] = @admin
+  end
 
 end

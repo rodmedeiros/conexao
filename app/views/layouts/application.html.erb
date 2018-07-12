@@ -11,6 +11,11 @@
 <%= render 'partials/header' %>
 <main>
   <div class="container">
+    <% flash.each do |nome, msg| %>
+        <div class="alert alert-<%= nome %>" role="alert">
+          <%= msg %>
+        </div>
+    <% end %>
     <%= yield %>
   </div>
 </main>

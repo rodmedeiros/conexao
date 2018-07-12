@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_11_160743) do
+ActiveRecord::Schema.define(version: 2018_07_12_133332) do
 
   create_table "conversas", force: :cascade do |t|
     t.datetime "created_at", null: false

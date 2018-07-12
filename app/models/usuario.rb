@@ -5,4 +5,5 @@ class Usuario < ApplicationRecord
   has_secure_password
 
   validates :iduff, :tipo, :nome, presence: true
+  validates :iduff, :cpf, uniqueness: true
 end
