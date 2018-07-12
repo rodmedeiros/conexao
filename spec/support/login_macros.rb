@@ -8,8 +8,8 @@ module LoginMacros
 
   # spec de feature para logar na apliação pela view
   def sign_in(user)
-    visit login_path
-    click_link 'Log In'
+    visit root_path
+    click_link 'Entrar'
     fill_in 'CPF', with: user.cpf
     fill_in 'Senha', with: user.password
     click_button 'Entrar'

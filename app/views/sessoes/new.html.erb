@@ -1,0 +1,18 @@
+<div class="row">
+
+  <%= form_tag({controller: 'sessoes', action: 'create'}, method: 'post', class: 'form-signin offset-sm-2 col-sm-8 col-sm-auto') do %>
+    <h1 class='h3 text-center mb-3 font-weight-normal'>Entre no sistema</h1>
+    <div class="form-group">
+      <%= label_tag(:cpf, 'Seu CPF', class: 'font-weight-bold') %>
+      <%= text_field_tag(:cpf, '', placeholder: 'CPF', class: 'form-control') %>
+      <small id="cpf" class="form-text text-muted">Somente números</small>
+
+    </div>
+    <div class="form-group">
+      <%= label_tag(:senha, 'Senha', class: 'font-weight-bold') %>
+      <%= password_field_tag(:senha, '', placeholder: 'senha', class: 'form-control') %>
+    </div>
+
+    <%= submit_tag('Entrar', class: 'btn btn-dark btn-block') %>
+  <% end %>
+</div>
