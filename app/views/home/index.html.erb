@@ -1,5 +1,34 @@
-<h1>Bem vindo ao novo Sistema :)</h1>
+<!-- <h1>Bem vindo ao novo Sistema :)</h1>
 <h2>Você já está logado no portal.</h2>
 <p>usuario_corrente.iduff #=> <%= usuario_corrente.iduff%></p>
 <p>usuario_corrente.ip #=> <%= usuario_corrente.ip%></p>
-<p>usuario_logado? #=> <%= usuario_logado? %></p>
+<p>usuario_logado? #=> <%= usuario_logado? %></p> -->
+<h2 class="col bg-secondary text-light p-3 text-center">Introdução Humano-computador</h2>
+<div class="col">
+  <div class="row p-5">
+    <div class="informacoes-turma col-sm-12 col-lg-4">
+      <nav class="nav flex-column">
+        <div class="nav-item text-center p-3">
+          <img src="https://placekitten.com/g/200/200" alt="profile" class="img-thumbnail rounded img-fluid">
+        </div>
+        <div class="nav-item list-group list-group-flush">
+          <%= link_to '#', class: 'nav-item list-group-item list-group-item-action' do %>
+            <i class="fas fa-book-open"></i>
+            Conteúdo
+          <% end %>
+          <%= link_to '#', class: 'nav-item list-group-item list-group-item-action' do %>
+            <i class="fas fa-tasks"></i>
+            Tarefas
+          <% end %>
+          <%= link_to '#', class: 'nav-item list-group-item list-group-item-action' do %>
+            <i class="fas fa-user-friends"></i>
+            Colegas de Turma
+          <% end %>
+        </div>
+      </nav>
+    </div>
+    <div class="postagens col-lg-8 col-sm-12">
+      postagens
+    </div>
+  </div>
+</div>
