@@ -1,1 +1,31 @@
-<h1>Disciplinas</h1>
+<h2 class="col bg-secondary text-light p-3">Minhas Disciplinas</h2>
+
+<div class="disciplinas col p-3">
+  <div class="row">
+
+    <% @disciplinas.each do |disciplina| %>
+      <div class="col-lg-6 col-sm-12">
+        <div class="card bg-dark text-light mb-3">
+          <h4 class="card-header"><%= disciplina[:nome] %></h4>
+          <div class="card-text p-3">
+            <table class="table table-borderless">
+                <tr>
+                  <th scope="row">Semestre</th>
+                  <td><%= disciplina[:semestre] %></td>
+                </tr>
+                <tr>
+                  <th scope="row">Professor</th>
+                  <td><%= disciplina[:professor] %></td>
+                </tr>
+                <tr>
+                  <th scope="row">Situação</th>
+                  <td><%= disciplina[:situacao] %></td>
+                </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>

@@ -27,11 +27,9 @@
       <div class="col-md-2 bg-dark d-none d-lg-block">
         <%= render 'partials/sidebar' %>
       </div>
-      <div class="col p-4">
-        <main>
-          <%= yield %>
-        </main>
-      </div>
+      <main class="col">
+        <%= yield %>
+      </main>
     </div>
   </div>
 </body>
