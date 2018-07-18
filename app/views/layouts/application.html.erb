@@ -15,7 +15,7 @@
   <!-- Componente de alerta que avisa os usuários sobre ações feitas -->
   <!-- TODO: Alterar componente para flutuante e absolutamente posicionado -->
 <% flash.each do |nome, msg| %>
-    <div class="alert alert-<%= nome %> fixed-top mx-auto col-sm-8 mt-1" role="alert">
+    <div class="alert alert-<%= nome %> alert-dismissible fade show fixed-top mx-auto col-sm-8 mt-1" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>

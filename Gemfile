@@ -12,6 +12,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'normalize-rails'
 gem 'bootstrap'
+gem 'jquery-rails'
 
 # Chose which database you wish to use
 gem 'sqlite3', '~> 1.3', '>= 1.3.13'
