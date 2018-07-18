@@ -1,0 +1,28 @@
+<nav class="nav nav-pills flex-column list-group list-group-flush">
+
+  <%= link_to root_path, class: 'nav-item list-group-item list-group-item-action list-group-item-dark' do %>
+    <i class="fas fa-home"></i>
+    <span class="pl-2">Página Inicial</span>
+  <% end %>
+
+  <%= link_to '#', class: 'nav-item list-group-item list-group-item-action list-group-item-dark' do %>
+    <i class="fas fa-map"></i>
+    <span class="pl-2">Plano de Estudo</span>
+  <% end %>
+
+  <%= link_to disciplinas_path, class: 'nav-item list-group-item list-group-item-action list-group-item-dark' do %>
+    <i class="fas fa-book"></i>
+    <span class="pl-2">Disciplinas</span>
+  <% end %>
+
+  <%= link_to '#', class: 'nav-item list-group-item list-group-item-action list-group-item-dark' do %>
+    <i class="fas fa-calendar"></i>
+    <span class="pl-2">Calendário</span>
+  <% end %>
+
+  <%= link_to '#', class: 'nav-item list-group-item list-group-item-action list-group-item-dark' do %>
+    <i class="fas fa-comment"></i>
+    <span class="pl-2">Mensagens</span>
+  <% end %>
+
+</ul>

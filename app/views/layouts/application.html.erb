@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
 <head>
   <title>Sistema UFF</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- instala fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
 </head>
-<body>
-
+<body class="h-100">
 <%= render 'partials/header' %>
-<main>
-  <div class="container">
-    <% flash.each do |nome, msg| %>
-        <div class="alert alert-<%= nome %>" role="alert">
-          <%= msg %>
-        </div>
-    <% end %>
-    <%= yield %>
+  <!-- Componente de alerta que avisa os usuários sobre ações feitas -->
+  <!-- TODO: Alterar componente para flutuante e absolutamente posicionado -->
+<% flash.each do |nome, msg| %>
+    <div class="alert alert-<%= nome %> fixed-top mx-auto col-sm-8 mt-1" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <%= msg %>
+      </div>
+  <% end %>
+  <div class="h-100">
+    <div class="row no-gutters h-100">
+      <div class="col-md-2 bg-dark d-none d-lg-block">
+        <%= render 'partials/sidebar' %>
+      </div>
+      <div class="col p-4">
+        <main>
+          <%= yield %>
+        </main>
+      </div>
+    </div>
   </div>
-</main>
-
 </body>
 </html>
