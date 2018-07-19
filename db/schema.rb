@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_12_133332) do
+ActiveRecord::Schema.define(version: 2018_07_19_142609) do
 
   create_table "conversas", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -47,13 +47,13 @@ ActiveRecord::Schema.define(version: 2018_07_12_133332) do
   end
 
   create_table "participacoes", force: :cascade do |t|
-    t.integer "users_id"
     t.integer "turma_id"
     t.string "tipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "usuario_id"
     t.index ["turma_id"], name: "index_participacoes_on_turma_id"
-    t.index ["users_id"], name: "index_participacoes_on_users_id"
+    t.index ["usuario_id"], name: "index_participacoes_on_usuario_id"
   end
 
   create_table "postagens", force: :cascade do |t|
