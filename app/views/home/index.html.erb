@@ -6,7 +6,7 @@
 <h2 class="col bg-secondary text-light p-3 text-center">Introdução Humano-computador</h2>
 <div class="col">
   <div class="row p-5">
-    <div class="informacoes-turma col-sm-12 col-lg-4">
+    <div class="informacoes-gerais col-sm-12 col-lg-4">
       <nav class="nav flex-column">
         <div class="nav-item text-center p-3">
           <img src="https://placekitten.com/g/200/200" alt="profile" class="img-thumbnail rounded img-fluid">
@@ -27,8 +27,62 @@
         </div>
       </nav>
     </div>
-    <div class="postagens col-lg-8 col-sm-12">
-      postagens
+    <div class="topicos col-lg-8 col-sm-12 mt-4 mt-lg-0" style="overflow: auto">
+
+      <div class="topico bg-secondary text-light card mb-5">
+        <div class="card-header">
+          <div class="details float-right">
+            <span class="author">Augusto José</span> -
+            <span class="date"><%= Date.new(2018, 10, 04) %></span>
+          </div>
+          <h4>Titulo</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="comentarios list-group list-group-flush text-dark">
+          <div class="list-group-item font-weight-bold text-center">Comentários</div>
+          <div class="comentario list-group-item">
+            <div class="relato">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="detalhes float-right">
+              <span class="author">Aluno 1</span> -
+              <span class="date"><%= Date.new(2018, 7, 17) %></span>
+            </div>
+          </div>
+          <div class="comentario list-group-item">
+            <div class="relato">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="detalhes float-right">
+              <span class="author">Aluno 1</span> -
+              <span class="date"><%= Date.new(2018, 7, 17) %></span>
+            </div>
+          </div>
+
+          <form class="list-group-item insere-comentario">
+            <div class="form-group">
+              <input type="text" name="relato" id="relato" class="form-control" placeholder="entre com seu comentário">
+            </div>
+            <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="topico bg-secondary text-light card">
+        <div class="card-header">
+          <div class="details float-right">
+            <span class="author">Augusto José</span> -
+            <span class="date"><%= Date.new(2018, 10, 04) %></span>
+          </div>
+          <h4>Titulo</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
