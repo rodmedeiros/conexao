@@ -2,10 +2,18 @@
 
 FactoryGirl.define do
   factory :turma do
-    codigo_turma "001"
-    codigo_disciplina "002"
-    disciplina "BPM"
+    sequence(:codigo_turma) { |n| "A#{n}" }
+    sequence(:codigo_disciplina) { |n| "GMA000#{n}" }
+    disciplina 'Cálculo II-A'
     ano 2018
-    semestre 1
+    semestre { rand(1..2) }
+
+    factory :turma_com_professor do
+
+      after(:create) do |turma|
+        # cria um professor novo
+        create :leciona, turma: turma
+      end
+    end
   end
 end

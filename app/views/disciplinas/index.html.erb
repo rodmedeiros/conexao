@@ -3,27 +3,26 @@
 <div class="disciplinas col p-3">
   <div class="row">
 
-    <% @disciplinas.each do |disciplina| %>
+    <% @turmas.each do |turma| %>
+
       <div class="col-lg-6 col-sm-12">
         <div class="card bg-dark text-light mb-3">
-          <h4 class="card-header"><%= disciplina[:nome] %></h4>
+          <h4 class="card-header"><%= turma.disciplina %> (<%= turma.codigo_disciplina %>) - <%= turma.codigo_turma %></h4>
           <div class="card-text p-3">
             <table class="table table-borderless">
                 <tr>
                   <th scope="row">Semestre</th>
-                  <td><%= disciplina[:semestre] %></td>
+                  <td><%= turma.semestre %></td>
                 </tr>
                 <tr>
                   <th scope="row">Professor</th>
-                  <td><%= disciplina[:professor] %></td>
-                </tr>
-                <tr>
-                  <th scope="row">Turma</th>
-                  <td><%= disciplina[:turma] %></td>
+                  <% turma.professores.each do |professor| %>
+                    <td><%= p professor.nome %></td>
+                  <% end %>
                 </tr>
                 <tr>
                   <th scope="row">Situação</th>
-                  <td><%= disciplina[:situacao] %></td>
+                  <td>INSCRITO</td>
                 </tr>
             </table>
           </div>

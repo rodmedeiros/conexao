@@ -2,14 +2,32 @@
 
 FactoryGirl.define do
   factory :usuario do
-    iduff "875849283"
-    tipo "aluno"
-    cpf '17722511600'
+    sequence(:iduff) { |n| "55555#{n}555" }
+    sequence(:cpf) { |n| "00000#{n}00000" }
     password { Faker::Internet.password }
     nome { Faker::Name.name }
+    tipo { [:aluno, :professor, :servidor].shuffle.take(1)[0] }
 
     factory :admin do
       admin true
     end
+
+    factory :aluno_com_disciplinas do
+      tipo :aluno
+
+      ignore do
+        turmas_tamanho 10
+      end
+
+      after(:create) do |usuario, evaluator|
+        evaluator.turmas_tamanho.times do
+
+        # cria as participacoes pertinentes
+        create :inscreve, usuario: usuario, turma: create(:turma_com_professor)
+
+        end
+      end
+    end
+
   end
 end

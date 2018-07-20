@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_19_142609) do
+ActiveRecord::Schema.define(version: 2018_07_20_113322) do
 
   create_table "conversas", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2018_07_19_142609) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "usuario_id"
+    t.string "situacao", default: "inscrito"
     t.index ["turma_id"], name: "index_participacoes_on_turma_id"
     t.index ["usuario_id"], name: "index_participacoes_on_usuario_id"
   end

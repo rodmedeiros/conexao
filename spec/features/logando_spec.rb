@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Logando', focus: true do
+RSpec.feature 'Logando' do
   given(:usuario_credenciado) { create :admin }
   given(:usuario_nao_credenciado) { build :usuario }
 
