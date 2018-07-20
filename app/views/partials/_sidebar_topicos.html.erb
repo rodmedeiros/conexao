@@ -1,0 +1,19 @@
+<nav class="nav flex-column">
+  <div class="nav-item text-center p-3">
+    <img src="https://placekitten.com/g/200/200" alt="profile" class="img-thumbnail rounded img-fluid">
+  </div>
+  <div class="nav-item list-group list-group-flush">
+    <%= link_to conteudo_path, class: 'nav-item list-group-item list-group-item-action' do %>
+      <i class="fas fa-book-open"></i>
+      Conteúdo
+    <% end %>
+    <%= link_to tarefas_path, class: 'nav-item list-group-item list-group-item-action' do %>
+      <i class="fas fa-tasks"></i>
+      Tarefas
+    <% end %>
+    <%= link_to '#', class: 'nav-item list-group-item list-group-item-action' do %>
+      <i class="fas fa-user-friends"></i>
+      Colegas de Turma
+    <% end %>
+  </div>
+</nav>

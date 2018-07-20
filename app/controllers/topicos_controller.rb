@@ -19,6 +19,14 @@ class TopicosController < ApplicationController
     @topico.destroy
   end
 
+  def conteudo
+    
+  end
+
+  def tarefas
+
+  end
+
   private
 
   def topico_params

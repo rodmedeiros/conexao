@@ -5,9 +5,16 @@ Rails.application.routes.draw do
 
 
   resources :usuarios
-  resources :disciplinas
+  resources :disciplinas do
+    resources :topicos
+  end
 
   get '/login', to: 'sessoes#new'
   post '/login', to: 'sessoes#create'
   get '/logout', to: 'sessoes#destroy'
+
+  # Rotas adicionadas apenas para definir interação de usuário
+  get '/conteudo', to: 'topicos#conteudo'
+  get '/tarefas', to: 'topicos#tarefas'
+
 end
