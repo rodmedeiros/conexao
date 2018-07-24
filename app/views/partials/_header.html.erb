@@ -7,11 +7,11 @@
 
     <div class="form-inline my-2 my-lg-0">
       <% if logado? %>
-        <span class="navbar-text mr-sm-4"> Bem-vindo, <%= admin.nome %></span>
-        <%= link_to 'Sair', logout_path, class: 'nav-link btn btn-outline-info btn-md' %>
+        <span class="navbar-text mr-sm-4"> Bem-vindo, <%= usuario_atual.nome %></span>
+        <%= link_to 'Sair', logout_path, method: 'delete', class: 'nav-link btn btn-outline-info btn-md' %>
       <% else %>
         <%= link_to 'Entrar', login_path, class: 'nav-link btn btn-outline-info btn-md' %>
       <% end %>
-    </ul>
+    </div>
   </nav>
 </header>

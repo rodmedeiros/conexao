@@ -1,5 +1,9 @@
 class DisciplinasController < ApplicationController
   def index
-    @turmas = usuario_logado.turmas
+    if !usuario_atual.nil?
+      @turmas = usuario_atual.turmas
+    else
+      redirect_to root_path
+    end
   end
 end

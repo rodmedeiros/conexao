@@ -1,5 +1,8 @@
 class UsuariosController < ApplicationController
 
+  before_action :autorizado, except: [:new, :create]
+  before_action :usuario_certo?, only: [:edit, :update, :destroy]
+
   def new
     @usuario = Usuario.new
   end

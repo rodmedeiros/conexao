@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.1'
 
-gem 'iduff-sso', '0.1.0', source: 'https://XXXXXXXX:XXXXXXXX@sistemas.uff.br/sti/gemserver/'
+
 
 gem 'rails', '5.2.0'
 gem 'puma', '3.10.0'

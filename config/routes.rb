@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessoes#new'
   post '/login', to: 'sessoes#create'
   get '/logout', to: 'sessoes#destroy'
+  delete '/logout', to: 'sessoes#destroy'
 
   # Rotas adicionadas apenas para definir interação de usuário
   get '/conteudo', to: 'topicos#conteudo'
